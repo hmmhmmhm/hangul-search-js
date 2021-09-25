@@ -46,5 +46,12 @@
   },
   "dependencies": {
     "hangul-js": "^0.2.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmmhmmhm/hangul-search-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hmmhmmhm/hangul-search-js/issues"
   }
 }
