@@ -10,7 +10,8 @@
     "module": "commonjs",
     "target": "ES3",
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "lib": [
       "es5",
