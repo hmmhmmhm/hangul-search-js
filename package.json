@@ -1,6 +1,6 @@
 {
   "name": "hangul-search-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple Korean text search module",
   "scripts": {
     "test": "jest --env=node --colors && jest-coverage-badges --output './badges'",
