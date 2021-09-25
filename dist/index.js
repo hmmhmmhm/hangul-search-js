@@ -11,7 +11,7 @@ var getChars = function (keyword) {
 };
 var createSearch = function (items) {
     var itemCounts = items.map(function (item) { return getChars(item); });
-    var search = function (keyword) {
+    var search = function (keyword, options) {
         var keywordCounts = getChars((0, hangul_js_1.disassemble)(keyword).join(''));
         var founds = [];
         itemCounts.map(function (itemCount, index) {

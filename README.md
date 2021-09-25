@@ -22,8 +22,8 @@ npm i hangul-search-js
 import { createSearch } from 'hangul-search-js'
 
 const search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
-const result = search('시ㄴ')
-// result: ['롯데시네마', '프로게이머']
+const result = search('시ㄴ') // result: ['롯데시네마', '프로게이머']
+const resultExact = search('시ㄴ', { exact: true }) // result: ['롯데시네마']
 ```
 
 <br/>
@@ -38,8 +38,8 @@ const result = search('시ㄴ')
 var createSearch = window.hangulSearch
 
 var search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
-var result = search('시ㄴ')
-// result: ['롯데시네마', '프로게이머']
+var result = search('시ㄴ') // result: ['롯데시네마', '프로게이머']
+var resultExact = search('시ㄴ', { exact: true }) // result: ['롯데시네마']
 ```
 
 <br/>

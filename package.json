@@ -11,7 +11,14 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "keywords": [],
+  "keywords": [
+    "korea",
+    "korean",
+    "korean-letters",
+    "korean-text-processing",
+    "korean-nlp",
+    "korean-language"
+  ],
   "author": "hmmhmmhm",
   "license": "MIT",
   "devDependencies": {
