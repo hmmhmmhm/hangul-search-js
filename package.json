@@ -1,12 +1,13 @@
 {
   "name": "hangul-search-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Korean text search module",
   "scripts": {
     "test": "jest --env=node --colors && jest-coverage-badges --output './badges'",
     "build": "tsc",
     "export": "tsc && webpack",
-    "lint": "prettier --write ./src/**/*.{ts,js}"
+    "lint": "prettier --write ./src/**/*.{ts,js}",
+    "release": "release-it"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -30,6 +31,7 @@
     "jest": "27.0.1",
     "jest-coverage-badges": "^1.1.2",
     "prettier": "^2.3.1",
+    "release-it": "^14.11.6",
     "terser-webpack-plugin": "^4.0.0",
     "ts-jest": "27.0.1",
     "typescript": "^4.4.3",
