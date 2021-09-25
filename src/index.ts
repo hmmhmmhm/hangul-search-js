@@ -15,26 +15,36 @@ export const createSearch = (items: string[]) => {
     keyword: string,
     options?: {
       exact?: boolean
+      order?: boolean
     }
   ) => {
     const keywordCounts = getChars(disassemble(keyword).join(''))
     const founds: [string, number][] = []
     itemCounts.map((itemCount, index) => {
       let matchCount = 0
-      let exactFullCheck = 0
+      let exactFullCheck =
+        options?.exact === true ? Object.keys(keywordCounts).length : 0
       let exactCheck = 0
+      const exactOrderCheck = [] as string[]
 
       Object.entries(itemCount).map(([itemKey, itemValue]) => {
-        if (options?.exact === true)
-          exactFullCheck = Object.keys(keywordCounts).length
-
         Object.entries(keywordCounts).map(([keywordKey, keywordValue]) => {
           if (itemKey === keywordKey && itemValue >= keywordValue) {
             matchCount += keywordValue
             if (options?.exact === true) exactCheck += 1
+            if (options?.order === true) exactOrderCheck.push(itemKey)
           }
         })
       })
+
+      if (options?.order === true) {
+        if (
+          !Object.keys(keywordCounts).every(
+            (element, index) => element === exactOrderCheck[index]
+          )
+        )
+          return
+      }
 
       if (options?.exact === true) {
         if (matchCount !== 0 && exactFullCheck === exactCheck)

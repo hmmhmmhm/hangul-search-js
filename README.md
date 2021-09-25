@@ -21,9 +21,22 @@ npm i hangul-search-js
 ```ts
 import { createSearch } from 'hangul-search-js'
 
-const search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
-const result = search('시ㄴ') // result: ['롯데시네마', '프로게이머']
-const resultExact = search('시ㄴ', { exact: true }) // result: ['롯데시네마']
+const search = createSearch([
+  '롯데시네마',
+  '유튜브',
+  '프로게이머',
+  '가난',
+  '난가'
+])
+
+const result = search('시ㄴ')
+// result: ['롯데시네마', '프로게이머', '가난', '난가']
+
+const resultExact = search('시ㄴ', { exact: true })
+// result: ['롯데시네마']
+
+const resultExact = search('난가', { exact: true, order: true })
+// result: ['난가']
 ```
 
 <br/>
@@ -37,9 +50,22 @@ const resultExact = search('시ㄴ', { exact: true }) // result: ['롯데시네�
 ```js
 var createSearch = window.hangulSearch
 
-var search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
-var result = search('시ㄴ') // result: ['롯데시네마', '프로게이머']
-var resultExact = search('시ㄴ', { exact: true }) // result: ['롯데시네마']
+var search = createSearch([
+  '롯데시네마',
+  '유튜브',
+  '프로게이머',
+  '가난',
+  '난가'
+])
+
+var result = search('시ㄴ')
+// result: ['롯데시네마', '프로게이머', '가난', '난가']
+
+var resultExact = search('시ㄴ', { exact: true })
+// result: ['롯데시네마']
+
+var resultExact = search('난가', { exact: true, order: true })
+// result: ['난가']
 ```
 
 <br/>
