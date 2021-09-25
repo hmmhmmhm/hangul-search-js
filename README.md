@@ -4,20 +4,39 @@
 
 <br/>
 
-## 📦 Installation
+## 📦 Usage (ES5+)
 
 ```bash
 npm i hangul-search-js
 ```
 
-<br/>
-
-## 🌸 How to use
-
 ```ts
 import { createSearch } from 'hangul-search-js'
 
-const search = createSearch(['롯데시네마', '유튜브', '프로F게이머'])
+const search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
 const result = search('시ㄴ')
 expect(result).toMatchObject(['롯데시네마', '프로게이머'])'
 ```
+
+<br/>
+
+<br/>
+
+## 📦 Usage (CDN)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/hangul-search-js/export/hangul-search.js"></script>
+```
+```js
+var createSearch = window.hangulSearch
+
+var search = createSearch(['롯데시네마', '유튜브', '프로게이머'])
+var result = search('시ㄴ')
+expect(result).toMatchObject(['롯데시네마', '프로게이머'])'
+```
+
+<br/>
+
+## 💡 License
+
+MIT Licensed.

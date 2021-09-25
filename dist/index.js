@@ -27,11 +27,9 @@ var createSearch = function (items) {
             if (matchCount !== 0)
                 founds.push([items[index], matchCount]);
         });
-        return founds.sort(function (min, max) { return max[1] - min[1]; });
+        return founds.sort(function (min, max) { return max[1] - min[1]; }).map(function (found) { return found[0]; });
     };
     return search;
 };
 exports.createSearch = createSearch;
-var search = (0, exports.createSearch)(['롯데시네마', '유튜브', '프로게이머']);
-var result = search('시ㄴ');
-console.log(result);
+exports["default"] = exports.createSearch;

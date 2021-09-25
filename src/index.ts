@@ -31,3 +31,5 @@ export const createSearch = (items: string[]) => {
 
   return search
 }
+
+export default createSearch
